@@ -3,21 +3,26 @@ HtmlWebpackPlugin = require('html-webpack-plugin'),
 CleanWebpackPlugin = require('clean-webpack-plugin'),
 MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const pathes = {
+  dist: './dist',
+  src: './src'
+}
+
 module.exports = {
   mode: 'development',
-  entry: './src/js/index.js',
   devtool: 'source-map',
+  entry: './src/js/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, pathes.dist),
     filename: 'js/bundle.js'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: pathes.dist
   },
   plugins: [
-  new CleanWebpackPlugin(['dist']),
+  new CleanWebpackPlugin([pathes.dist]),
   new HtmlWebpackPlugin({
-    template: './src/index.html'
+    template: pathes.src + '/index.html'
   }),
   new MiniCssExtractPlugin({
     filename: "css/style.css"
