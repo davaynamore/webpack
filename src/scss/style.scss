@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 body {
 	background-color: #000;
 	color: #fff;
@@ -29,3 +31,16 @@ img {
 	}
 }
 
+[class*="col"] {
+	min-height: 30px;
+	background: red;
+	position: relative;
+
+	&:before{
+		content: '1';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
