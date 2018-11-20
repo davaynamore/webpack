@@ -1,6 +1,7 @@
 const path = require('path'),
 HtmlWebpackPlugin = require('html-webpack-plugin'),
 CleanWebpackPlugin = require('clean-webpack-plugin'),
+autoprefixer = require('autoprefixer'),
 MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const pathes = {
@@ -50,7 +51,19 @@ module.exports = {
         loader: "css-loader", options: {
           sourceMap: true
         }
-      }, {
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          plugins: [
+          autoprefixer({
+            browsers:['ie >= 8', 'last 4 version']
+          })
+          ],
+          sourceMap: true
+        }
+      },
+      {
         loader: "sass-loader", options: {
           sourceMap: true
         }
