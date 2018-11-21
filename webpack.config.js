@@ -2,6 +2,7 @@ const path = require('path'),
 HtmlWebpackPlugin = require('html-webpack-plugin'),
 CleanWebpackPlugin = require('clean-webpack-plugin'),
 autoprefixer = require('autoprefixer'),
+WebpackNotifierPlugin = require('webpack-notifier')
 MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const pathes = {
@@ -21,6 +22,7 @@ module.exports = {
     contentBase: pathes.dist
   },
   plugins: [
+  new WebpackNotifierPlugin(),
   new CleanWebpackPlugin([pathes.dist]),
   new HtmlWebpackPlugin({
     template: pathes.src + '/index.html'
