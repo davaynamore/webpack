@@ -6,7 +6,7 @@ WebpackNotifierPlugin = require('webpack-notifier')
 MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const pathes = {
-  dist: './dist',
+  dist: './app',
   src: './src'
 }
 
