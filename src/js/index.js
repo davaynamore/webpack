@@ -1,6 +1,5 @@
-import * as assets from './assets/';
-import {add, cubes, tails, randomFromOne, regForm, todo} from './modules/';
-
+import { image, imageStyles } from '../components/image/';
+import { test, testStyles } from '../components/test/';
 
 // function User(name, role){
 // 	this.name = name;

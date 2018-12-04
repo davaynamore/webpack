@@ -1,0 +1,9 @@
+#test {
+	$size: 200px;
+	width: $size;
+	height: $size;
+	background-color: green;
+	background-image: url('/img/test.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
